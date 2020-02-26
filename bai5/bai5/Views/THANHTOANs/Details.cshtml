@@ -1,0 +1,50 @@
+﻿@model bai5.THANHTOAN
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>THANHTOAN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NHANVIEN.HoTenNV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NHANVIEN.HoTenNV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THUEPHONG.MaHDThuePhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THUEPHONG.MaHDThuePhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayThanhToan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayThanhToan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TienPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TienPhong)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaThanhToan }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
