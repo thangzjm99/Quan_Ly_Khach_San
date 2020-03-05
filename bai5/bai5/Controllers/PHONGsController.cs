@@ -15,13 +15,20 @@ namespace bai5.Controllers
         private Model1 db = new Model1();
 
         // GET: PHONGs
-        public ActionResult Index()
+        public ActionResult Index(string searchString, string sortOrder)
         {
-            return View(db.PHONGs.ToList());
+            var phongs = from l in db.PHONGs // lấy toàn bộ liên kết
+                         select l;
+
+            if (!String.IsNullOrEmpty(searchString)) // kiểm tra chuỗi tìm kiếm có rỗng/null hay không
+            {
+                phongs = phongs.Where(s => s.LoaiPhong.Contains(searchString)); //lọc theo chuỗi tìm kiếm
+            }
+            return View(phongs.ToList());
         }
 
-        // GET: PHONGs/Details/5
-        public ActionResult Details(int? id)
+            // GET: PHONGs/Details/5
+            public ActionResult Details(int? id)
         {
             if (id == null)
             {
