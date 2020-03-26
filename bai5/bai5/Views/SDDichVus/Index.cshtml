@@ -4,48 +4,51 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>SỬ DỤNG DỊCH VỤ</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DICHVU.TenDV)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PHONG.LoaiPhong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.THUEPHONG.MaHDThuePhong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SoLuong)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DICHVU.TenDV)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PHONG.LoaiPhong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.THUEPHONG.MaHDThuePhong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoLuong)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
-
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DICHVU.TenDV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PHONG.LoaiPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.THUEPHONG.MaHDThuePhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DICHVU.TenDV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PHONG.LoaiPhong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.THUEPHONG.MaHDThuePhong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuong)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

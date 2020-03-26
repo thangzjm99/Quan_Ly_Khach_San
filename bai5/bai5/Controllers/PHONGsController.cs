@@ -17,14 +17,8 @@ namespace bai5.Controllers
         // GET: PHONGs
         public ActionResult Index(string searchString, string sortOrder)
         {
-            var phongs = from l in db.PHONGs // lấy toàn bộ liên kết
-                         select l;
-
-            if (!String.IsNullOrEmpty(searchString)) // kiểm tra chuỗi tìm kiếm có rỗng/null hay không
-            {
-                phongs = phongs.Where(s => s.LoaiPhong.Contains(searchString)); //lọc theo chuỗi tìm kiếm
-            }
-            return View(phongs.ToList());
+            
+            return View(db.PHONGs.ToList());
         }
 
             // GET: PHONGs/Details/5
