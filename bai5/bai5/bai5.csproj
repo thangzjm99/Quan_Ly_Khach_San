@@ -1783,6 +1783,34 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="HomeProperties\images\demo\222x100.png" />
+    <Content Include="HomeProperties\images\demo\320x240.png" />
+    <Content Include="HomeProperties\images\demo\320x320.png" />
+    <Content Include="HomeProperties\images\demo\480x360.png" />
+    <Content Include="HomeProperties\images\demo\6498.jpg" />
+    <Content Include="HomeProperties\images\demo\avatar.png" />
+    <Content Include="HomeProperties\images\demo\backgrounds\01.png" />
+    <Content Include="HomeProperties\images\demo\backgrounds\02.png" />
+    <Content Include="HomeProperties\images\demo\backgrounds\03.png" />
+    <Content Include="HomeProperties\images\demo\backgrounds\04.png" />
+    <Content Include="HomeProperties\images\demo\backgrounds\index.html" />
+    <Content Include="HomeProperties\images\demo\gallery\01.png" />
+    <Content Include="HomeProperties\images\demo\gallery\index.html" />
+    <Content Include="HomeProperties\images\demo\imgl.gif" />
+    <Content Include="HomeProperties\images\demo\imgr.gif" />
+    <Content Include="HomeProperties\images\demo\index.html" />
+    <Content Include="HomeProperties\images\index.html" />
+    <Content Include="HomeProperties\layout\index.html" />
+    <Content Include="HomeProperties\layout\scripts\index.html" />
+    <Content Include="HomeProperties\layout\scripts\jquery.backtotop.js" />
+    <Content Include="HomeProperties\layout\scripts\jquery.min.js" />
+    <Content Include="HomeProperties\layout\scripts\jquery.mobilemenu.js" />
+    <Content Include="HomeProperties\layout\styles\font-awesome.min.css" />
+    <Content Include="HomeProperties\layout\styles\fonts\fontawesome-webfont.svg" />
+    <Content Include="HomeProperties\layout\styles\fonts\index.html" />
+    <Content Include="HomeProperties\layout\styles\framework.css" />
+    <Content Include="HomeProperties\layout\styles\index.html" />
+    <Content Include="HomeProperties\layout\styles\layout.css" />
     <Content Include="Image\avatar.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1959,6 +1987,11 @@
     <Content Include="Content\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\vendor\jquery\jquery.min.map" />
     <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="HomeProperties\layout\styles\fonts\fontawesome-webfont.eot" />
+    <Content Include="HomeProperties\layout\styles\fonts\fontawesome-webfont.ttf" />
+    <Content Include="HomeProperties\layout\styles\fonts\fontawesome-webfont.woff" />
+    <Content Include="HomeProperties\layout\styles\fonts\fontawesome-webfont.woff2" />
+    <Content Include="HomeProperties\layout\styles\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2025,6 +2058,7 @@
     <Content Include="Views\TRANGTHIETBIs\Edit.cshtml" />
     <Content Include="Views\TRANGTHIETBIs\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Shared\lohp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
