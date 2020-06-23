@@ -15,6 +15,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.MaPhong)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.LoaiPhong)
             </th>
             <th>
@@ -29,22 +32,25 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LoaiPhong)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TinhTrang)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.GiaTien)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.MaPhong }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.MaPhong }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.MaPhong })
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoaiPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TinhTrang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaTien)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaPhong }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaPhong }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaPhong })
+            </td>
+        </tr>
         }
     </tbody>
 </table>
