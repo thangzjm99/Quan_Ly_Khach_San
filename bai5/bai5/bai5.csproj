@@ -1814,6 +1814,14 @@
     <Content Include="HomeProperties\layout\styles\index.html" />
     <Content Include="HomeProperties\layout\styles\layout.css" />
     <Content Include="Image\avatar.jpg" />
+    <Content Include="Image\Screenshot %28139%29.png" />
+    <Content Include="Image\Screenshot %28140%29.png" />
+    <Content Include="Image\Screenshot %28141%29.png" />
+    <Content Include="Image\Screenshot %28142%29.png" />
+    <Content Include="Image\Screenshot %28147%29.png" />
+    <Content Include="Image\Screenshot %28148%29.png" />
+    <Content Include="Image\Screenshot %28149%29.png" />
+    <Content Include="Image\Screenshot %28150%29.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\.browserslistrc" />
@@ -2061,6 +2069,7 @@
     <Content Include="Views\TRANGTHIETBIs\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Shared\lohp.cshtml" />
+    <Content Include="Views\Home\Guide.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
