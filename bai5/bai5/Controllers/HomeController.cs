@@ -26,5 +26,9 @@ namespace bai5.Controllers
 
             return View();
         }
+        public ActionResult Guide()
+        {
+            return View();
+        }
     }
 }

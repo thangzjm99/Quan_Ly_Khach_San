@@ -4,54 +4,77 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+    <h2>TRANG THIẾT BỊ</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PHONG.LoaiPhong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TenTTB)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SoLuong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TinhTrang)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GiaTri)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PHONG.LoaiPhong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenTTB)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoLuong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TinhTrang)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GiaTri)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaTTB }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaTTB }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaTTB })
-        </td>
-    </tr>
-}
-
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PHONG.LoaiPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenTTB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TinhTrang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaTri)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PHONG.LoaiPhong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenTTB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TinhTrang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GiaTri)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaTTB }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaTTB }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaTTB })
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PHONG.LoaiPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenTTB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TinhTrang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaTri)
+            </th>
+            <th></th>
+        </tr>
+    </tfoot>
 </table>

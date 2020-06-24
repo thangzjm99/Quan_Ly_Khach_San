@@ -4,54 +4,77 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>DANH SÁCH THUÊ PHÒNG</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.KHACHHANG.HoTenKH)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NHANVIEN.HoTenNV)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PHONG.LoaiPhong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NgayThue)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NgayTra)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.KHACHHANG.HoTenKH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NHANVIEN.HoTenNV)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PHONG.LoaiPhong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayThue)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayTra)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaHDThuePhong }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaHDThuePhong }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaHDThuePhong })
-        </td>
-    </tr>
-}
-
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KHACHHANG.HoTenKH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NHANVIEN.HoTenNV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PHONG.LoaiPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayThue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayTra)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KHACHHANG.HoTenKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NHANVIEN.HoTenNV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PHONG.LoaiPhong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayThue)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayTra)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaHDThuePhong }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaHDThuePhong }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaHDThuePhong })
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KHACHHANG.HoTenKH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NHANVIEN.HoTenNV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PHONG.LoaiPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayThue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayTra)
+            </th>
+            <th></th>
+        </tr>
+    </tfoot>
 </table>

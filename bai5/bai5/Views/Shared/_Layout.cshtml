@@ -1,30 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
-<script src="~/Content/vendor/jquery/jquery.min.js"></script>
-<script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="~/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="~/Content/js/sb-admin-2.min.js"></script>
-
-<!-- Page level plugins -->
-<script src="~/Content/vendor/chart.js/Chart.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="~/Content/js/demo/chart-area-demo.js"></script>
-<script src="~/Content/js/demo/chart-pie-demo.js"></script>
-
-<link rel="stylesheet" href="~/Content/bootstrap.min.css" />
-<script src="~/bootstrap.min.js"></script>
-<link rel="stylesheet" href="~/Content/Custom/Select.css">
-
-
-
 <head>
-
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Employee Management Application</title>
+    <title>SB Admin 2 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="~/Content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -40,7 +17,7 @@
 
     <!-- Custom styles for this template-->
     <link href="~/Content/css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -52,12 +29,11 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="@Url.Action("Index","Home")">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Admin</div>
+                <div class="sidebar-brand-text mx-3">MTA Hotel <sup>Management</sup></div>
             </a>
 
             <!-- Divider -->
@@ -76,31 +52,32 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Main feature
+                MAIN FEATURE
             </div>
 
 
 
-            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Categories</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-
-                        @Html.ActionLink("Dịch vụ", "Index", "DICHVUs", null, new { @class = "collapse-item" })
-                        @Html.ActionLink("Khách hàng", "Index", "KHACHHANGs", null, new { @class = "collapse-item" })
-                        @Html.ActionLink("Nhân viên", "Index", "NHANVIENs", null, new { @class = "collapse-item" })
-                        @Html.ActionLink("Thuê phòng", "Index", "NHANVIENs", null, new { @class = "collapse-item" })
-                        @Html.ActionLink("aaaaa", "Index", "NHANVIENs", null, new { @class = "collapse-item" })
-                        @Html.ActionLink("Nhân viên", "Index", "NHANVIENs", null, new { @class = "collapse-item" })
-
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" @Html.ActionLink("Phòng", "Index", "PHONGs")</a>
+                        <a class="collapse-item" @Html.ActionLink("Trang thiết bị", "Index", "TRANGTHIETBIs")</a>
+                        <a class="collapse-item" @Html.ActionLink("Khách hàng", "Index", "KHACHHANGs")</a>
+                        <a class="collapse-item" @Html.ActionLink("Thuê Phòng", "Index", "THUEPHONGs")</a>
+                        <a class="collapse-item" @Html.ActionLink("Dịch vụ sử dụng", "Index", "SDDichVus")</a>
+                        <a class="collapse-item" @Html.ActionLink("Thanh toán", "Index", "THANHTOANs")</a>
                     </div>
                 </div>
             </li>
 
+            <!-- hình cờ lê
+     <i class="fas fa-fw fa-wrench"></i> -->
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -110,19 +87,15 @@
             </div>
 
 
-
-
-
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="@Url.Action("Guide","Home")">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Instruction</span>
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Intruction</span>
                 </a>
             </li>
 
-
-
+            
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -147,18 +120,18 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    @*<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                            <div class="input-group">
-                                <input type="text" name="searchTop" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" type="submit">
-                                        <i class="fas fa-search fa-sm"></i>
-                                    </button>
-                                </div>
+                    <!-- Topbar Search
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" name="searchTop" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
                             </div>
-                        </form>*@
-
+                        </div>
+                    </form>                     
+                    -->
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -187,7 +160,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrator</span>
-                                <img class="img-profile rounded-circle" src="~/Image/male_avatar-512.png">
+                                <img class="img-profile rounded-circle" src="~/Image/avatar.jpg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -210,11 +183,8 @@
                 <!-- End of Topbar -->
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h1 mb-0 text-gray-800"></h1>
 
-                    </div>
-                    @RenderBody()
+                    @RenderBody();
 
                 </div>
                 <!-- /.container-fluid -->
@@ -225,7 +195,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your employee management application</span>
+                        <span>Copyright &copy; Your Website 2019</span>
                     </div>
                 </div>
             </footer>
@@ -260,8 +230,50 @@
         </div>
     </div>
 
+    <!-- Bootstrap core JavaScript-->
+    <!-- <script src="~/Content/vendor/jquery/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Core plugin JavaScript-->
+    <script src="~/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
 
+    <!-- Custom scripts for all pages-->
+    <script src="~/Content/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="~/Content/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/Content/js/demo/chart-area-demo.js"></script>
+    <script src="~/Content/js/demo/chart-pie-demo.js"></script>
+
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTable tfoot th').each(function () {
+                var title = $(this).text();
+                $(this).html('<input type="text" placeholder="Search..." />');
+            });
+
+            var table = $('#myTable').DataTable({
+                // DataTable
+                initComplete: function () {
+                    // Apply the search
+                    this.api().columns().every(function () {
+                        var that = this;
+
+                        $('input', this.footer()).on('keyup change clear', function () {
+                            if (that.search() !== this.value) {
+                                that
+                                    .search(this.value)
+                                    .draw();
+                            }
+                        });
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
-</html>
