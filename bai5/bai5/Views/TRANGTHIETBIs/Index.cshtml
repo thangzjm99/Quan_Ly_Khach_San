@@ -11,24 +11,24 @@
 </p>
 <table class="table" id="myTable">
     <thead>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PHONG.LoaiPhong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TenTTB)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SoLuong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TinhTrang)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GiaTri)
-        </th>
-        <th></th>
-    </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PHONG.LoaiPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenTTB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TinhTrang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaTri)
+            </th>
+            <th></th>
+        </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
@@ -57,4 +57,24 @@
             </tr>
         }
     </tbody>
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PHONG.LoaiPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenTTB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TinhTrang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaTri)
+            </th>
+            <th></th>
+        </tr>
+    </tfoot>
 </table>

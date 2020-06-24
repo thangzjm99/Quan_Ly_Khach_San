@@ -24,6 +24,7 @@ namespace bai5
         public string HoTenNV { get; set; }
 
         [Column(TypeName = "date")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime? NgaySinh { get; set; }
 
         [StringLength(10)]
